@@ -1,4 +1,8 @@
-<p>
-  contacts-list works!
-  {{contact}}
-</p>
+
+  <!--contacts-list works!-->
+  <!--{{contact}}-->
+
+  <ul *ngFor="let contact of contacts">
+    <li>{{contact.firstName}}</li>
+  </ul>
+
