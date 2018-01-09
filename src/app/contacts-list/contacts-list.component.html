@@ -27,10 +27,13 @@
 
     <td><button
             class="btn btn-danger"
-            (click)="remove(contact)">
+            (click)="removeContact(contact)">
           X
         </button>
     </td>
 
   </tr>
 </table>
+
+<input type="text" name="" [(ngModel)]="testModel">
+<div>Input value:{{testModel}}</div>

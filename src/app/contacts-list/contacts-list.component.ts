@@ -9,6 +9,7 @@ export class ContactsListComponent implements OnInit {
 
   //contact='First Contact';
   contacts;
+  testModel;
 
   constructor() { 
 
