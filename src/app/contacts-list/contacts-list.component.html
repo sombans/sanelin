@@ -2,12 +2,35 @@
   <!--contacts-list works!-->
   <!--{{contact}}-->
 
-  <ul *ngFor="let contact of contacts">
-   <!-- <li *ngIf="contact.firstName == 'Martin' && contact.lastName =='Hess'">{{contact.firstName}} {{contact.lastName}} {{contact.email}}</li>-->
+  <!--<ul *ngFor="let contact of contacts">
+   <li *ngIf="contact.firstName == 'Martin' && contact.lastName =='Hess'">{{contact.firstName}} {{contact.lastName}} {{contact.email}}</li>
    <li >{{contact.firstName}} {{contact.lastName}} {{contact.email}}
     <button class="btn btn-danger"
     (click)="removeContact(contact)">Remove</button>
    </li>
    
-  </ul>
+  </ul>-->
 
+<table class="table table">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tr *ngFor="let contact of contacts">
+    <td>{{contact.firstName}}</td>
+    <td>{{contact.lastName}}</td>
+    <td>{{contact.email}}</td>
+
+    <td><button
+            class="btn btn-danger"
+            (click)="remove(contact)">
+          X
+        </button>
+    </td>
+
+  </tr>
+</table>
