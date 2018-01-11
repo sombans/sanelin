@@ -28,5 +28,8 @@ public getContacts(){
       }
     ];
   }
+  public getMessage(){
+    return 'bravoooo';
+  }
 }
 
