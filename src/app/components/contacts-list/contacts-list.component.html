@@ -11,7 +11,7 @@
    
   </ul>-->
 
-<table class="table table">
+<table class="table table" >
   <thead>
     <tr>
       <th>First name</th>
@@ -20,7 +20,7 @@
       <th>Action</th>
     </tr>
   </thead>
-  <tr *ngFor="let contact of contacts">
+  <tr *ngFor="let contact of contacts | filter:searchTerm">
     <td>{{contact.firstName}}</td>
     <td>{{contact.lastName}}</td>
     <td>{{contact.email | uppercase}}</td>
@@ -35,5 +35,5 @@
   </tr>
 </table>
 
-<input type="text" name="" [(ngModel)]="testModel">
+<input type="text" name="" [(ngModel)]="searchTerm">
 <div>Input value:{{testModel}}</div>
